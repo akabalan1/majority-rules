@@ -16,15 +16,18 @@
             <button onclick="startGame()">Start Game</button>
             <button onclick="nextQuestion()">Next Question</button>
             <div id="playerList"></div>
+            <canvas id="resultsChart" width="800" height="400"></canvas>
+            <div id="leaderboard"></div>
         </div>
-        <script>
-            const password = prompt("Enter admin password:");
-            if (password !== "love2025") {
-                alert("Access denied.");
-                window.location.href = "index.html";
-            }
-        </script>
-        <script src="admin.js"></script>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const password = prompt("Enter admin password:");
+        if (password !== "love2025") {
+            alert("Access denied.");
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="admin.js"></script>
 </body>
 </html>
