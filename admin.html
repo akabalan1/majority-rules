@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin - Majority Rules</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ Admin Panel</h1>
+        </header>
+        <div id="admin-screen">
+            <h2>Control the Game</h2>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="nextQuestion()">Next Question</button>
+            <div id="playerList"></div>
+        </div>
+        <script>
+            const password = prompt("Enter admin password:");
+            if (password !== "love2025") {
+                alert("Access denied.");
+                window.location.href = "index.html";
+            }
+        </script>
+        <script src="admin.js"></script>
+    </div>
+</body>
+</html>
