@@ -1,0 +1,1 @@
+// JS logic for Majority Rules game
