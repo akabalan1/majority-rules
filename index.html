@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majority Rules Game</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Majority Rules</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div id="game">
-        <h1>Majority Rules</h1>
-        <div id="join-section">
-            <input type="text" id="player-name" placeholder="Enter your name" />
-            <button onclick="joinGame()">Join Game</button>
+    <div class="container">
+        <header>
+            <h1>💖 Majority Rules 💖</h1>
+            <p class="subtitle">Romantic Edition</p>
+        </header>
+        <div id="join-screen">
+            <input type="text" id="playerName" placeholder="Enter your name"/>
+            <button onclick="joinGame()">Join</button>
         </div>
-        <div id="question-section" style="display:none;">
-            <div id="question"></div>
+        <div id="admin-screen" style="display: none;">
+            <h2>Admin Controls</h2>
+            <button onclick="startGame()">Start Game</button>
+            <button onclick="nextQuestion()">Next Question</button>
+            <div id="playerList"></div>
+        </div>
+        <div id="question-screen" style="display: none;">
+            <h2 id="question-text"></h2>
             <div id="options"></div>
         </div>
-        <div id="leaderboard" style="display:none;"></div>
+        <div id="result-screen" style="display: none;">
+            <h2>Results</h2>
+            <div id="results"></div>
+            <button onclick="nextQuestion()">Next Question</button>
+        </div>
+        <div id="final-screen" style="display: none;">
+            <h2>🏆 Final Scores 🏆</h2>
+            <div id="leaderboard"></div>
+        </div>
+        <footer>
+            <p>Made with 💕 for couples everywhere</p>
+            <div class="gallery">
+                <img src="img1.png" alt="Romantic Moment"/>
+                <img src="img2.png" alt="Wedding"/>
+                <img src="img3.png" alt="Travel Together"/>
+            </div>
+        </footer>
     </div>
     <script src="app.js"></script>
 </body>
